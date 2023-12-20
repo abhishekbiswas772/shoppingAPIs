@@ -1,0 +1,6 @@
+Flask==2.3.2
+flask_smorest
+Flask-SQLAlchemy
+python-dotenv
+SQLAlchemy
+flask-jwt-extended
