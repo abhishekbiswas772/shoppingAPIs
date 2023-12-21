@@ -6,6 +6,7 @@ class ItemModel(db.Model):
     name = db.Column(db.String(80), unique=True, nullable=False)
     price = db.Column(db.Float(precision=2), unique=False, nullable=False)
     description = db.Column(db.String)
-    store_id = db.Column(db.Integer, db.ForeignKey("stores.id"), nullable=False)
+
+    store_id = db.Column(db.Integer, db.ForeignKey("stores.id"), nullable=False, unique=False)
     store = db.relationship("StoreModel", back_populates="items")
-    tags = db.relationship("ItemTagsModel", secondary = "items_tags", back_populates = "items")
+    tags = db.relationship("ItemTagsModel", back_populates = "items", secondary = "items_tags")
