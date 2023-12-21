@@ -8,7 +8,7 @@ from flask_jwt_extended import JWTManager
 import secrets
 from resources.user import blp as UserBluePrint
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from flask_migrate import Migrate
 
 
@@ -16,7 +16,7 @@ def create_app(db_url=None):
     app = Flask(__name__)
     # Comment this when Deployment
     # Take From OS Env
-    load_dotenv()
+    # load_dotenv()
     app.config["API_VERSION"] = os.getenv("API_VERSION","v1")
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_TITLE"] = os.getenv("API_TITLE", "stores REST API")
