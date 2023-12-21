@@ -5,3 +5,4 @@ python-dotenv
 SQLAlchemy
 flask-jwt-extended
 flask-migrate
+gunicorn
