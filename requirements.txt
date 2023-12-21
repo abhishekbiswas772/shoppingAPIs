@@ -4,3 +4,4 @@ Flask-SQLAlchemy
 python-dotenv
 SQLAlchemy
 flask-jwt-extended
+flask-migrate
